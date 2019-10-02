@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': nbrePoint > 0,
+                'list-group-item-danger': nbrePoint < 0}">
+  <div  style="float: right">
+    <p>{{ dateMaj | date: 'MM/dd/yyyy, hh:mm a' }}</p>
+  </div>
+  <h1 [ngStyle]="{color: getColor()}">{{monTitle}}</h1>
+  <p>{{maContent}}</p>
+  <button class="btn btn-success" (click)="loveIt()">Love it!</button>
+  &nbsp;
+  <button class="btn btn-danger" (click)="dontLoveIt()">Don't love it!</button>
+</li>
